@@ -1,0 +1,11 @@
+{
+  "name": "binomial-proportion",
+  "version": "1.0.0",
+  "description": "calculate the high bound, low bound, and center of binomial proportion confidence interval",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hiroaki Egusa <egusa.hiroaki@gmail.com> (https://github.com/egusahiroaki)",
+  "license": "MIT"
+}

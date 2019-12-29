@@ -10,5 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "jstat": "^1.9.2"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0"
   }
 }

@@ -7,11 +7,11 @@ const BinomialProportion = (count, nobs, alpha = 0.05, method = "normal") => {
   switch (method) {
     case "normal":
       sd = z * Math.sqrt((p * (1 - p)) / nobs);
-      return { lowerBound: p - sd, upperBound: p + sd };
+      return { lowerBound: p - sd, value: p, upperBound: p + sd };
     case "agresti_coull":
-      p = (count + z ** 2 / 2) / (nobs + z ** 2);
-      sd = z * Math.sqrt((p * (1 - p)) / (nobs + z ** 2));
-      return { lowerBound: p - sd, upperBound: p + sd };
+      const pAc = (count + z ** 2 / 2) / (nobs + z ** 2);
+      sd = z * Math.sqrt((pAc * (1 - pAc)) / (nobs + z ** 2));
+      return { lowerBound: pAc - sd, value: p, upperBound: pAc + sd };
     case "wilson":
       const denominator = 1 + z ** 2 / nobs;
       const centre_adjusted_probability = p + (z * z) / (2 * nobs);
@@ -26,7 +26,7 @@ const BinomialProportion = (count, nobs, alpha = 0.05, method = "normal") => {
         (centre_adjusted_probability + z * adjusted_standard_deviation) /
         denominator;
 
-      return { lowerBound, upperBound };
+      return { lowerBound, value: p, upperBound };
   }
 };
 

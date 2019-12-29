@@ -4,7 +4,7 @@
   "description": "calculate the high bound, low bound, and center of binomial proportion confidence interval",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "nyc ava"
   },
   "author": "Hiroaki Egusa <egusa.hiroaki@gmail.com> (https://github.com/egusahiroaki)",
   "license": "MIT",
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "nyc": "^15.0.0"
   }
 }

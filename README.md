@@ -1,8 +1,6 @@
 # binomial-proportion
 
-[![Build Status](https://travis-ci.org/egusahiroaki/binomial-proportion.svg?branch=master)](https://travis-ci.org/egusahiroaki/binomial-proportion)
-
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Build Status](https://travis-ci.org/egusahiroaki/binomial-proportion.svg?branch=master)](https://travis-ci.org/egusahiroaki/binomial-proportion) [![Coverage Status](https://coveralls.io/repos/github/egusahiroaki/binomial-proportion/badge.svg?branch=master)](https://coveralls.io/github/egusahiroaki/binomial-proportion?branch=master) [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 Simple JavaScript implementation of Binomial Proportion Confidence Interval. You can use three types of their methods.
 

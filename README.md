@@ -21,10 +21,6 @@ npm install binomial-proportion
 ```javascript
 const BinomialProportion = require("binomial-proportion");
 
-/*
-    "normal" or "agresti_coull", "wilson"
-*/
-
 const result = BinomialProportion(50, 500, 0.05, "normal");
 /*
     {
@@ -34,3 +30,10 @@ const result = BinomialProportion(50, 500, 0.05, "normal");
     }
 */
 ```
+
+BinomialProportion(observed, sample, significance level, method);
+
+- `observed` Number of observed positive outcomes.
+- `sample` Size of sample.
+- `significance level` The probability of rejecting the null hypothesis when it is true
+- `method` "normal", "agresti_coull", "wilson"

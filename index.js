@@ -2,7 +2,7 @@ const jStat = require("jstat");
 
 const BinomialProportion = (count, nobs, alpha = 0.05, method = "normal") => {
   const z = -1 * jStat.normal.inv(alpha / 2, 0, 1);
-  const p = count / nobs;
+  let p = count / nobs;
   let sd;
   switch (method) {
     case "normal":

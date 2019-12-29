@@ -1,6 +1,12 @@
 const jStat = require("jstat");
 
 const BinomialProportion = (count, nobs, alpha = 0.05, method = "normal") => {
+  if (nobs === 0) {
+    return {
+      lowerBound: 0, value: 0, upperBound: 0
+    }
+  }
+
   const z = -1 * jStat.normal.inv(alpha / 2, 0, 1);
   let p = count / nobs;
   let sd;

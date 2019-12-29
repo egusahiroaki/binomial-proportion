@@ -1,6 +1,14 @@
 import test from "ava";
 import BinomialProportion from "../index";
 
+test("total is 0", t => {
+    const result = BinomialProportion(50, 0, 0.05, "normal");
+    t.is(result.lowerBound, 0);
+    t.is(result.value, 0);
+    t.is(result.upperBound, 0);
+  });
+  
+
 test("normal: Binominal(10, 500, 0.05, 'normal')", t => {
   const result = BinomialProportion(50, 500, 0.05, "normal");
   t.is(result.lowerBound, 0.07370432378270254);

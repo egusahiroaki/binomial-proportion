@@ -22,16 +22,16 @@ const BinomialProportion = (count, nobs, alpha = 0.05, method = "normal") => {
     }
     case "wilson": {
       const denominator = 1 + z ** 2 / nobs;
-      const centre_adjusted_probability = p + (z * z) / (2 * nobs);
-      const adjusted_standard_deviation = Math.sqrt(
+      const centreAdjustedProbability = p + (z * z) / (2 * nobs);
+      const adjustedStandardDeviation = Math.sqrt(
           (p * (1 - p) + z ** 2 / (4 * nobs)) / nobs
       );
 
       const lowerBound =
-          (centre_adjusted_probability - z * adjusted_standard_deviation) /
+          (centreAdjustedProbability - z * adjustedStandardDeviation) /
           denominator;
       const upperBound =
-          (centre_adjusted_probability + z * adjusted_standard_deviation) /
+          (centreAdjustedProbability + z * adjustedStandardDeviation) /
           denominator;
       return { lowerBound, value: p, upperBound };
     }
